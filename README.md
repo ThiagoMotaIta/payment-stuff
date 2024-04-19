@@ -4,8 +4,9 @@ Welcome to **Readme of simplified Payment System**!
 
 ## About the Project ☕️
 
-- User can Login or Create account;
-- User can access his finalcial balance;
+- List all Payments;
+- See a payment details;
+- Create new Payment;
 
 ## About the Stacks 📜
 
