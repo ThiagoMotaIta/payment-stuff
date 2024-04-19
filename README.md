@@ -23,7 +23,7 @@ In this project, you will see:
 - DRY;
 - SOLID;
 
-## API DOC 📜
+## API ROUTES 📜
 
 - **GET**: ..api/payments (List All payments);
 - **GET**: ..api/payments/{id} (A payment details);
