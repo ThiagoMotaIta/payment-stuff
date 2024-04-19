@@ -21,13 +21,13 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 
 // List payments
-Route::get('payments', [PaymentController::class, 'getAllPayments']);
+Route::get('payments', [PaymentController::class, 'getAllPayments'])->middleware('auth');
 
 // Get a payment details
-Route::get('payments/{id}', [PaymentController::class, 'getPayment']);
+Route::get('payments/{id}', [PaymentController::class, 'getPayment'])->middleware('auth');
 
 // Post a Payment
-Route::post('payment', [PaymentController::class, 'createPayment']);
+Route::post('payment', [PaymentController::class, 'createPayment'])->middleware('auth');
 
 // Simulating a provider
-Route::post('payment/process', [PaymentController::class, 'paymentProcess']);
+Route::post('payment/process', [PaymentController::class, 'paymentProcess'])->middleware('auth');
