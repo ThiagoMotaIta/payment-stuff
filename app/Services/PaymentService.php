@@ -82,7 +82,7 @@ class PaymentService {
                 ], 200);
             } else {
                 return response()->json([
-                  "message" => "Payment registred, but NOT processed!"
+                  "message" => "Payment registered, but NOT processed!"
                 ], 200);
             }
 
