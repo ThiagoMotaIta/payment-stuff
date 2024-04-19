@@ -25,9 +25,9 @@ In this project, you will see:
 
 ## API ROUTES 📜
 
-- **GET**: ..api/payments (List All payments);
-- **GET**: ..api/payments/{id} (A payment details);
-- **POST**: ..api/payment (Create a Payment); -> Data: {
+- **GET**: <url>/api/payments (List All payments);
+- **GET**: <url>/api/payments/{id} (A payment details);
+- **POST**: <url>/api/payment (Create a Payment); -> Data: {
   "payment_method": 2,
 	"client_name": "Thiago Mota",
 	"cpf": "54924375004",
@@ -35,7 +35,7 @@ In this project, you will see:
 	"amount": 600,
 	"status": 1
 }
-- **POST**: ..api/payment/process (Process a Payment) -> Data: {
+- **POST**: <url>/api/payment/process (Process a Payment) -> Data: {
 	"payment_id": 1
 };
 
