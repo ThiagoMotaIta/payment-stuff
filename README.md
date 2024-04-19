@@ -23,6 +23,22 @@ In this project, you will see:
 - DRY;
 - SOLID;
 
+## API DOC 📜
+
+- **GET**: ..api/payments (List All payments);
+- **GET**: ..api/payments/{id} (A payment details);
+- **POST**: ..api/payment (Create a Payment); -> Data: {
+  "payment_method": 2,
+	"client_name": "Thiago Mota",
+	"cpf": "54924375004",
+	"description": "Something goes here",
+	"amount": 600,
+	"status": 1
+}
+- **POST**: ..api/payment/process (Process a Payment) -> Data: {
+	"payment_id": 1
+};
+
 ## Some prints ☕️
 
 - Example of API end-points
