@@ -23,21 +23,9 @@ In this project, you will see:
 - DRY;
 - SOLID;
 
-## API ROUTES 📜
+## API DOC 📜
 
-- **GET**: <url>/api/payments (List All payments);
-- **GET**: <url>/api/payments/{id} (A payment details);
-- **POST**: <url>/api/payment (Create a Payment); -> Data: {
-  "payment_method": 2,
-	"client_name": "Thiago Mota",
-	"cpf": "54924375004",
-	"description": "Something goes here",
-	"amount": 600,
-	"status": 1
-}
-- **POST**: <url>/api/payment/process (Process a Payment) -> Data: {
-	"payment_id": 1
-};
+- You can access API DOC by clicking <a href="https://github.com/ThiagoMotaIta/payment-stuff/blob/main/public/paymentstuff_api_documentation.pdf" target="_blank">HERE</a>
 
 ## Some prints ☕️
 
