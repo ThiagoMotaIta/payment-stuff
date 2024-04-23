@@ -31,14 +31,22 @@ class PaymentController extends Controller
         $validation = true;
         $number = rand(0, 99);
 
-        if ($number <= 30) {
-            $validation = false;
-        }
+        try {
 
-        return response()->json([
-          "validation" => $validation,
-          "payment_id" => $request->payment_id
-        ], 202);
+            if ($number <= 30) {
+                $validation = false;
+            }
+
+            return response()->json([
+              "validation" => $validation,
+              "payment_id" => $request->payment_id
+            ], 202);
+
+        } catch (Exception $e){
+            return response()->json([
+              'error' => $e->getMessage()
+            ], 405);
+        }
 
     }
 }

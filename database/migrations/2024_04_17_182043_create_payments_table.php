@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('cpf', 20);
             $table->string('description', 155)->nullable();
             $table->decimal('amount', 10, 2);
-            $table->string('status', 1);
+            $table->string('status', 1); // (P = pending, A = paid, E = expired, F = failed)
             $table->timestamps();
         });
 

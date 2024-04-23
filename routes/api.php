@@ -24,7 +24,7 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 Route::get('payments', [PaymentController::class, 'getAllPayments'])->middleware('auth');
 
 // Get a payment details
-Route::get('payments/{id}', [PaymentController::class, 'getPayment'])->middleware('auth');
+Route::get('payment/{id}', [PaymentController::class, 'getPayment'])->middleware('auth');
 
 // Post a Payment
 Route::post('payment', [PaymentController::class, 'createPayment'])->middleware('auth');
