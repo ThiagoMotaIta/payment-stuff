@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\PaymentController;
+use App\Http\Controllers\api\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,19 +16,22 @@ use App\Http\Controllers\api\PaymentController;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
+Route::controller(AuthController::class)->group(function () {
+    Route::post('login', 'login');
+    Route::post('register', 'register');
+    Route::post('logout', 'logout');
+    Route::post('refresh', 'refresh');
 });
 
 
 // List payments
-Route::get('payments', [PaymentController::class, 'getAllPayments'])->middleware('auth');
+Route::get('payments', [PaymentController::class, 'getAllPayments']);
 
 // Get a payment details
-Route::get('payment/{id}', [PaymentController::class, 'getPayment'])->middleware('auth');
+Route::get('payment/{id}', [PaymentController::class, 'getPayment']);
 
 // Post a Payment
-Route::post('payment', [PaymentController::class, 'createPayment'])->middleware('auth');
+Route::post('payment', [PaymentController::class, 'createPayment']);
 
 // Simulating a provider
-Route::post('payment/process', [PaymentController::class, 'paymentProcess'])->middleware('auth');
+Route::post('payment/process', [PaymentController::class, 'paymentProcess']);
